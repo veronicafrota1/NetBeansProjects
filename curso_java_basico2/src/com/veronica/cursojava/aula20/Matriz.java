@@ -34,7 +34,6 @@ public class Matriz {
             opcao = scan.nextInt();
             
             if(opcao == 1) { // Adicionar compromisso
-                
                 // Dia
                 boolean diaValido = false;
                 int dia = 0;
@@ -75,7 +74,6 @@ public class Matriz {
                 
             }
             else if(opcao == 2) { // Verificar Compromisso
-               
                 // Dia
                 boolean diaValido = false;
                 int dia = 0;

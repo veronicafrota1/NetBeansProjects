@@ -117,7 +117,7 @@ public class Matriz {
                 sair = true; // Se a opcao for verdadeira o programa será encerrado.
             }
             else {
-                System.out.println("Opção inválida, digite novamente");
+                System.out.println("Opção inválida, digite novamente");// Caso nenhuma opção for válida
             }
         }
         

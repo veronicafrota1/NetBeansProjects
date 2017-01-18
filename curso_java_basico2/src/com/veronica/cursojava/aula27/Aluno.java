@@ -14,5 +14,43 @@ package com.veronica.cursojava.aula27;
  * seo aluno foi aprovado ou não.
  */
 public class Aluno {
+    String nome;
+    String nomeCurso;
+    String matricula;
+    String[] nomeDisciplina;
+    double[][] notasDisciplina;
     
+    void mostrarInfo(){
+        System.out.println("Nome: " + nome);
+        System.out.println("Nome do Curso: " + nomeCurso);
+        System.out.println("Número da Matricula: " + matricula);
+        System.out.println("Nome da Disciplina: " + nomeDisciplina);
+        
+        for(int i = 0; i < notasDisciplina.length; i++) {
+            System.out.println("Notas da Disciplina: " + nomeDisciplina[i]);
+            
+            for(int j = 0; j < notasDisciplina[i].length; j++) {
+                System.out.println(notasDisciplina[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+    
+    void verificaAprovado(int indice) {
+        
+        double soma = 0;
+        
+        for(int i = 0; i < notasDisciplina[i].length; i++) {
+            soma += notasDisciplina[indice][i]; //Realiza a soma das notas da 4 disciplinas
+        }
+        
+        double media = soma / 4; //Realiza o calculo da média
+        
+        if(media >= 7) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }

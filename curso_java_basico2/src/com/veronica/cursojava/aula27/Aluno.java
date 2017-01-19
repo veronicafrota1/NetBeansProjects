@@ -20,6 +20,7 @@ public class Aluno {
     String[] nomeDisciplina;
     double[][] notasDisciplina;
     
+    //Método para mostrar as informações do aluno
     void mostrarInfo(){
         System.out.println("Nome: " + nome);
         System.out.println("Nome do Curso: " + nomeCurso);
@@ -36,8 +37,19 @@ public class Aluno {
         }
     }
     
-    void verificaAprovado(int indice) {
+    //Método para verificar aprovação
+    boolean verificarAprovado(int indice) {
         
+        if(obterMedia(indice) >= 7) {
+            return true; //Aprovado
+        }
+        else {
+            return false; //Reprovado
+        }
+    }
+    
+    //Método para mostrar a média
+    double obterMedia(int indice) {
         double soma = 0;
         
         for(int i = 0; i < notasDisciplina[i].length; i++) {
@@ -46,11 +58,6 @@ public class Aluno {
         
         double media = soma / 4; //Realiza o calculo da média
         
-        if(media >= 7) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return media;
     }
 }

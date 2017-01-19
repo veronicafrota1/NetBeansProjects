@@ -53,5 +53,14 @@ public class ExercicioAluno {
         
         aluno.mostrarInfo();
         
+        for(int i = 0; i < aluno.nomeDisciplina.length; i++) {
+            if(aluno.verificarAprovado(i)) {
+                System.out.println("Disciplina " + aluno.nomeDisciplina[i] + " - aprovado"); //True
+            }
+            else {
+                System.out.println("Disciplina " + aluno.nomeDisciplina[i] + " - reprovado"); //False
+            }
+        }
+        
     }
 }
